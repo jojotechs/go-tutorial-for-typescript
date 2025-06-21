@@ -25,6 +25,10 @@ demo/
     │   ├── example.ts
     │   ├── demo.go
     │   └── answer.md
+    ├── pointers/               # 指针概念 ⭐ 新增
+    │   ├── example.ts
+    │   ├── demo.go
+    │   └── answer.md
     ├── functions/              # 函数
     │   ├── example.ts
     │   ├── demo.go
@@ -89,9 +93,19 @@ go build demo.go
 **关键差异：**
 - 结构体 vs 接口
 - 数组 vs 切片
-- 指针概念
+- 混合类型数组实现
 
-### 3. 函数 (`functions/`)
+### 3. 指针 (`pointers/`) ⭐ 新增
+
+掌握 Go 的指针概念，理解内存地址和引用。
+
+**关键差异：**
+- 显式指针 vs 引用类型
+- 内存地址操作
+- 可选属性实现
+- 值传递 vs 指针传递
+
+### 4. 函数 (`functions/`)
 
 掌握 Go 的函数定义、多返回值和并发模型。
 
@@ -100,7 +114,7 @@ go build demo.go
 - 无可选参数
 - goroutine + channel
 
-### 4. 条件语句 (`conditionals/`)
+### 5. 条件语句 (`conditionals/`)
 
 学习 Go 的条件控制和类型断言。
 
@@ -109,7 +123,7 @@ go build demo.go
 - switch 自动 break
 - 类型断言
 
-### 5. 循环语句 (`loops/`)
+### 6. 循环语句 (`loops/`)
 
 理解 Go 的循环模式和并发处理。
 
@@ -126,6 +140,8 @@ go build demo.go
 | 函数定义 | `function name(): type` | `func name() type` |
 | 数组 | `number[]` | `[]int` |
 | 对象 | `interface` | `struct` |
+| 可选属性 | `email?: string` | `email *string` |
+| 指针 | 不支持 | `*int`, `&variable` |
 | 异步 | `async/await` | `goroutine + channel` |
 | 错误处理 | `try/catch` | 返回 `error` |
 
