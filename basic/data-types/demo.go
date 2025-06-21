@@ -99,4 +99,65 @@ func main() {
 		// 可选属性
 		email *string
 	}
+
+	email := "john@example.com"
+	user := Person{
+		name:  "John Doe",
+		age:   32,
+		email: &email,
+	}
+
+	fmt.Printf("用户姓名:%s 用户年龄: %d 用户邮箱: %s\n", user.name, user.age, *user.email)
+
+	// 元祖类型
+	coordinate := [2]int{10, 20}
+	userInfo := [3]string{"Alice", "25", "true"}
+
+	fmt.Printf("坐标: %v\n", coordinate)
+	fmt.Printf("用户信息: %v\n", userInfo)
+
+	// 枚举类型
+	type Status string
+
+	const (
+		StatusPending  Status = "pending"
+		StatusApproved Status = "approved"
+		StatusRejected Status = "rejected"
+	)
+
+	currentStatus := StatusPending
+
+	fmt.Printf("Status: %s\n", currentStatus)
+
+	// 函数类型
+	calculateArea := func(width int, height int) int {
+		return width * height
+	}
+
+	area := calculateArea(10, 20)
+	fmt.Printf("面积: %d\n", area)
+
+	// 类型别名
+	type UserRole string
+
+	const (
+		UserRoleAdmin UserRole = "admin"
+		UserRoleUser  UserRole = "user"
+		UserRoleGuest UserRole = "guest"
+	)
+
+	role := UserRoleAdmin
+
+	fmt.Printf("Role: %s\n", role)
+
+	// null 和 undefined
+	var optionalValue *string = &message
+	var undefinedValue *string = nil
+
+	fmt.Printf("Optional Value: %s\n", *optionalValue)
+	fmt.Printf("Undefined Value: %v\n", undefinedValue)
+
+	// 输出示例
+	fmt.Printf("消息: %s\n", message)
+
 }
